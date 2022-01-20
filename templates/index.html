@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+	<head>
+		<title>CSE 5311 - Nitya Kansara</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/static/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="/static/assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+			<div id="wrapper">
+					<header id="header">
+						<div class="logo">
+							<span class="icon fa-gem"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>Nitya Kansara - 1001869794</h1>
+								<p>CSE - 5311 - 002 - Design & Analysis of Algorithms.</p>
+                                <p> Compare Minimum Spanning Trees using Kruskal & Prims Algorithms.</p>
+							</div>
+						</div>
+					</header><br/>
+                    <form class="form-group" action="/min_span_trees" method="POST">
+                        Enter Tree Vertices with Distance Values: <input type="text" style="display: inline-block;" placeholder="For example: 0,1,12,1,2,8,..." name="val"> <br/>
+                        <p>Here, Distance from 0 to 1 is 12, Distance from 1 to 2 is 8.</p>
+                        <input type="submit" style="display: inline-block;" value="Click to Generate Cost of MST">
+                    </form>
+
+                    {% if error %} 
+                        <p>{{error}}</p>
+                    {% endif %}
+			</div>
+			<div id="bg"></div>
+			<script src="/static/assets/js/jquery.min.js"></script>
+			<script src="/static/assets/js/browser.min.js"></script>
+			<script src="/static/assets/js/breakpoints.min.js"></script>
+			<script src="/static/assets/js/util.js"></script>
+			<script src="/static/assets/js/main.js"></script>
+	</body>
+</HTML>

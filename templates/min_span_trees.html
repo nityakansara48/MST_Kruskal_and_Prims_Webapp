@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+	<head>
+		<title>Dimension by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/static/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="/static/assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="icon fa-gem"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>Comparison of Minimum Spanning Trees using Kruskal & Prims Algorithms.</h1>
+							</div>
+						</div>
+                        {% if data %}<br/>
+                            <h2>Total Number of Vertices  :  {{ total_vertices }}</h2>
+                            <h2>Matrix Representation of Graph :  {{graph_array}}</h2>
+
+
+						<div class="table-wrapper">
+							<table>
+								<thead>
+									<tr>
+										<th>              </th>
+                                        <th>  <h2>Kruskal Algo</h2>  </th>
+                                        <th>  <h2>Prims Algo</h2>    </th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+                                        <td>  <h3>Cost of Minimum Spanning Tree</h3>    </td>
+                                        <td>  <h3>{{ mst1 }}</h3>   </td>
+                                        <td>  <h3>{{ mst2 }}</h3>   </td>
+									</tr>
+									<tr>
+                                        <td>  <h3>Runtime (s)</h3>   </td>
+                                        <td>  <h3>{{ rt1 }}</h3>     </td>
+                                        <td>  <h3>{{ rt2 }}</h3>     </td>
+									</tr>
+                                    <tr>
+                                        <td>  <h3>Edges in MST</h3>   </td>
+                                        <td>{% for i in mst_edges1 %}{{i}}<br/>{% endfor %}</td>
+                                        <td>{% for i in mst_edges2 %}{{i}}<br/>{% endfor %}</td>
+                                    </tr>
+								</tbody>
+							</table>
+                        </div>
+
+                        {% endif %}
+					</header>
+
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="/static/assets/js/jquery.min.js"></script>
+			<script src="/static/assets/js/browser.min.js"></script>
+			<script src="/static/assets/js/breakpoints.min.js"></script>
+			<script src="/static/assets/js/util.js"></script>
+			<script src="/static/assets/js/main.js"></script>
+
+	</body>
+</html>
